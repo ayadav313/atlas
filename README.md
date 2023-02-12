@@ -1,2 +1,2 @@
-# ```prototype.html```
-![Prototype Screenshot](prototype-screenshot.png)
+# ```prototype```
+![Prototype](https://ayadav313.github.io/)

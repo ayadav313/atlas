@@ -1,0 +1,180 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+      .form-title {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 40px;
+      }
+    </style>
+
+    <!-- Include the Firebase JavaScript library -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <!-- Add your Firebase configuration file -->
+    <script src="firebaseConfig.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand d-flex align-items-center" href="prototype-main.html">
+          <img src="logo-light.png" alt="Atilas Atlas logo" width="30" height="30">
+          <span class="ml-2">Atilas Atlas</span>
+        </a>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="prototype-routedash.html">
+                  <i class="fas fa-home"></i> Routes
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="prototype-routeplanner.html">
+                  <i class="fas fa-map-signs"></i> Plan Route
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="prototype-buildingindex.html">
+                  <i class="fas fa-home"></i> Building Directory
+                </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-sign-in-alt"></i> Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <style>
+        .navbar-brand {
+          text-align: center;
+        }
+      </style>
+    <div class="container mt-5">
+        <h1 class="text-center">Building Directory</h1>
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Academic Buildings</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <i class="fas fa-map-marker-alt mr-2"></i>ABS Engineering Center<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Babbio Center<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Burchard Building<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Carnegie Laboratory<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Davidson Laboratory<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Edwin A. Stevens Hall & DeBaun Auditorium<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Gateway Academic Center / Gianforte Family Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>South Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Kenneth J. Altorfer Academic Complex<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Kidde Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>McLean Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Morton Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Nicoll Environmental Laboratory<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>North Building<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Peirce Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Rocco Technology Center Samuel C. Williams Library<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Administrative Buildings</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <i class="fas fa-map-marker-alt mr-2"></i>1 Ninth Street<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>2 Ninth Street<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>807 Castle Point Terrace<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Gatehouse<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Griffith Building<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Hoxie House<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Martha Bayard Stevens Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Ruesterholz Admissions Center<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Student Wellness Center<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Wesley J. Howe Center<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>University Center Complex<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Residence Halls</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <i class="fas fa-map-marker-alt mr-2"></i>600 River Terrace<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>602 River Terrace<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>604 River Terrace (Gibb House)<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>606 River Terrace<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Castle Point Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Davis Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Humphreys Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Jonas Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Lore-El Center<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Palmer Hall<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Residential Towers / Harries Tower<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>South Tower<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Athletic Facilities</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <i class="fas fa-map-marker-alt mr-2"></i>Schaefer Athletic & Recreation Center<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Tennis Office<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Walker Gymnasium<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Parking Facilities</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <i class="fas fa-map-marker-alt mr-2"></i>8th St Lot<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Babbio Center Garage<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Castle Point Hall Lot<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Howe Center Lot<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>North Lot<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>River Lot<br>
+                  <i class="fas fa-map-marker-alt mr-2"></i>Ruesterholz Lots<br>
+                </p>
+              </div>
+            </div>
+          </div>
+    
+    </div>
+  </body>
+
+</html>

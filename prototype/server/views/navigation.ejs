@@ -1,0 +1,58 @@
+<!-- top navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <img src="/../res/logo-light.png" alt="Atilas Atlas logo" width="30" height="30">
+      <span class="ml-2">Atilas Atlas</span>
+    </a>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/route/dash">
+            <i class="fas fa-home"></i> Routes
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/route/add">
+            <i class="fas fa-map-signs"></i> Plan Route
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/building/index">
+            <i class="fas fa-home"></i> Building Directory
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/404">
+            
+            <button id="signin-button"> <i class="fas fa-sign-in-alt"></i>  Login with .stevens.edu</button>
+            <script>
+              var signinButton = document.getElementById("signin-button");
+              signinButton.addEventListener("click", function() {
+                var email = prompt("Please enter your email:");
+                var password = prompt("Please enter your password:");
+                firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+                  console.error("Error signing in:", error);
+                });
+              });
+            </script>
+
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <style>
+    .navbar-brand {
+      text-align: center;
+    }
+  </style>
